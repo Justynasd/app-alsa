@@ -1,82 +1,50 @@
+<script lang="ts" setup>
+const localePath = useLocalePath();
+const reveal = ref(false);
+</script>
+
 <template>
-  <v-app id="inspire">
-    <v-system-bar>
-      <v-spacer></v-spacer>
+  <v-card class="mx-auto" max-width="344">
+    <v-card-text>
+      <div>Word of the Day</div>
+      <p class="text-h4 text--primary">el·ee·mos·y·nar·y</p>
+      <p>adjective</p>
+      <div class="text--primary">
+        relating to or dependent on charity; charitable.<br />
+        "an eleemosynary educational institution."
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn variant="text" color="teal-accent-4" @click="reveal = true">
+        Learn More
+      </v-btn>
+    </v-card-actions>
 
-      <v-icon>mdi-square</v-icon>
-
-      <v-icon>mdi-circle</v-icon>
-
-      <v-icon>mdi-triangle</v-icon>
-    </v-system-bar>
-
-    <v-navigation-drawer v-model="drawer">
-      <v-sheet color="grey-lighten-4" class="pa-4">
-        <v-avatar class="mb-4" color="grey-darken-1" size="64"></v-avatar>
-
-        <div>john@google.com</div>
-      </v-sheet>
-
-      <v-divider></v-divider>
-
-      <v-list>
-        <v-list-item v-for="[icon, text] in links" :key="icon" link>
-          <template v-slot:prepend>
-            <v-icon>{{ icon }}</v-icon>
-          </template>
-
-          <v-list-item-title>{{ text }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-main>
-      <v-container class="py-8 px-6" fluid>
-        <v-row>
-          <v-col v-for="card in cards" :key="card" cols="12">
-            <v-card>
-              <v-list lines="two">
-                <v-list-subheader>{{ card }}</v-list-subheader>
-                <template v-for="n in 6" :key="n">
-                  <v-list-item>
-                    <template v-slot:prepend>
-                      <v-avatar color="grey-darken-1"></v-avatar>
-                    </template>
-
-                    <v-list-item-title>Message {{ n }}</v-list-item-title>
-
-                    <v-list-item-subtitle>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Nihil repellendus distinctio similique
-                    </v-list-item-subtitle>
-                  </v-list-item>
-
-                  <v-divider
-                    v-if="n !== 6"
-                    :key="`divider-${n}`"
-                    inset
-                  ></v-divider>
-                </template>
-              </v-list>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
-  </v-app>
+    <v-expand-transition>
+      <v-card v-if="reveal" class="v-card--reveal" style="height: 100%">
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">Origin</p>
+          <p>
+            late 16th century (as a noun denoting a place where alms were
+            distributed): from medieval Latin eleemosynarius, from late Latin
+            eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’
+          </p>
+        </v-card-text>
+        <v-card-actions class="pt-0">
+          <v-btn variant="text" color="teal-accent-4" @click="reveal = false">
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-expand-transition>
+  </v-card>
 </template>
 
-<script>
-export default {
-  data: () => ({
-    cards: ["Today", "Yesterday"],
-    drawer: null,
-    links: [
-      ["mdi-inbox-arrow-down", "Inbox"],
-      ["mdi-send", "Send"],
-      ["mdi-delete", "Trash"],
-      ["mdi-alert-octagon", "Spam"],
-    ],
-  }),
-};
-</script>
+<style scoped>
+.v-card--reveal {
+  bottom: 0;
+  opacity: 1 !important;
+  position: absolute;
+  width: 100%;
+}
+</style>
