@@ -1,18 +1,17 @@
 <script lang="ts" setup></script>
 
 <template>
-  <!-- <div class="container"> -->
   <v-app id="alsa">
-    <TheNavbar class="bg-primary" />
-    <!-- <TheHeader class="my-5" /> -->
+    <TheNavbar height="90" />
     <v-main class="my-5">
-      <v-container class="bg-secondary">
-        <slot />
+      <v-container max-width="1580px">
+        <v-sheet max-width="1580px">
+          <slot />
+        </v-sheet>
       </v-container>
     </v-main>
-    <TheFooter class="bg-primary" />
+    <TheFooter />
   </v-app>
-  <!-- </div> -->
 </template>
 
 <style scoped></style>

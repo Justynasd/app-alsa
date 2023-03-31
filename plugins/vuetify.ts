@@ -8,13 +8,22 @@ export default defineNuxtPlugin((nuxtApp) => {
     ssr: true,
     components,
     directives,
+    display: {
+      mobileBreakpoint: "sm",
+      thresholds: {
+        xs: 0,
+        sm: 600,
+        md: 960,
+        lg: 1264,
+      },
+    },
     theme: {
       themes: {
         light: {
           dark: false,
           colors: {
-            primary: "#81C784",
-            secondary: "#E8F5E9",
+            primary: "#A5D6A7",
+            secondary: "#F5F5F5",
           },
         },
       },

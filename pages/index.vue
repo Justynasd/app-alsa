@@ -1,50 +1,52 @@
 <script lang="ts" setup>
 const localePath = useLocalePath();
-const reveal = ref(false);
+const messages = ref([
+  {
+    from: "Turim",
+    message: "pažangiausias technologijas, didelę patirtį",
+    color: "teal-accent-4",
+  },
+  {
+    from: "Siulom",
+    message: "tik aukščiausios kokybės produktus",
+    color: "teal-accent-4",
+  },
+]);
 </script>
 
 <template>
-  <v-card class="mx-auto" max-width="344">
-    <v-card-text>
-      <div>Word of the Day</div>
-      <p class="text-h4 text--primary">el·ee·mos·y·nar·y</p>
-      <p>adjective</p>
-      <div class="text--primary">
-        relating to or dependent on charity; charitable.<br />
-        "an eleemosynary educational institution."
-      </div>
-    </v-card-text>
-    <v-card-actions>
-      <v-btn variant="text" color="teal-accent-4" @click="reveal = true">
-        Learn More
-      </v-btn>
-    </v-card-actions>
+  <v-row class="justify-center align-center">
+    <v-col cols="12" lg="10" xl="8">
+      <v-card color="secondary">
+        <v-img height="200" src="/home.jpg" cover class="text-white"> </v-img>
 
-    <v-expand-transition>
-      <v-card v-if="reveal" class="v-card--reveal" style="height: 100%">
-        <v-card-text class="pb-0">
-          <p class="text-h4 text--primary">Origin</p>
-          <p>
-            late 16th century (as a noun denoting a place where alms were
-            distributed): from medieval Latin eleemosynarius, from late Latin
-            eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’
-          </p>
+        <v-card-text>
+          <v-timeline density="compact" class="ml-5">
+            <v-timeline-item
+              v-for="message in messages"
+              :dot-color="message.color"
+              size="x-small"
+            >
+              <div class="mb-1">
+                <div class="font-weight-normal">
+                  <v-card-title>{{ message.from }}</v-card-title>
+                  {{ message.message }}
+                </div>
+              </div>
+            </v-timeline-item>
+          </v-timeline>
         </v-card-text>
-        <v-card-actions class="pt-0">
-          <v-btn variant="text" color="teal-accent-4" @click="reveal = false">
-            Close
+        <v-card-actions class="ml-2 ml-lg-3 ml-xl-4">
+          <v-btn
+            size="lg"
+            variant="text"
+            color="teal-accent-4"
+            :to="localePath('glassUnits')"
+          >
+            {{ $t("more") }}
           </v-btn>
         </v-card-actions>
       </v-card>
-    </v-expand-transition>
-  </v-card>
+    </v-col>
+  </v-row>
 </template>
-
-<style scoped>
-.v-card--reveal {
-  bottom: 0;
-  opacity: 1 !important;
-  position: absolute;
-  width: 100%;
-}
-</style>

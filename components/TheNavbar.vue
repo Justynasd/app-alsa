@@ -15,15 +15,14 @@ const drawer = ref(false);
 <template>
   <v-app-bar>
     <v-container>
-      <v-toolbar variant="text" class="bg-primary">
-        <v-btn height="90" max-height="90" width="90" max-width="90">
-          <the-logo />
-        </v-btn>
+      <v-toolbar color="white" height="90" variant="text">
+        <the-logo />
         <v-spacer></v-spacer>
 
-        <div class="d-none d-md-flex justify-center">
-          <div class="justify-center">
+        <div class="d-none d-md-flex">
+          <div class="mt-1">
             <v-btn
+              color="green-darken-3"
               v-for="link in links"
               variant="text"
               :to="localePath(link.item)"
@@ -32,39 +31,61 @@ const drawer = ref(false);
             </v-btn>
           </div>
 
-          <v-spacer class="ml-3"></v-spacer>
-          <div class="justify-end">
-            <v-btn width="20" :to="switchLocalePath('en')">EN</v-btn>
-            <v-btn :to="switchLocalePath('lt')">LT</v-btn>
+          <div class="pl-8">
+            <v-chip-group mandatory="force">
+              <v-chip
+                variant="text"
+                text="LT"
+                color="green-darken-3"
+                :to="switchLocalePath('lt')"
+                >LT</v-chip
+              >
+              <v-chip
+                variant="text"
+                text="EN"
+                color="green-darken-3"
+                :to="switchLocalePath('en')"
+                >EN</v-chip
+              ></v-chip-group
+            >
           </div>
         </div>
+
         <v-spacer></v-spacer>
-        <div class="d-md-none">
-          <v-btn :to="switchLocalePath('en')">EN</v-btn>
-          <v-btn :to="switchLocalePath('lt')">LT</v-btn>
+
+        <v-row class="d-md-none justify-end">
+          <v-chip-group mandatory="force">
+            <v-chip
+              variant="text"
+              text="LT"
+              color="green-darken-3"
+              :to="switchLocalePath('lt')"
+            />
+            <v-chip
+              variant="text"
+              text="EN"
+              color="green-darken-3"
+              :to="switchLocalePath('en')"
+            />
+          </v-chip-group>
           <v-app-bar-nav-icon
+            id="menu-activator"
             variant="text"
-            @click.stop="drawer = !drawer"
           ></v-app-bar-nav-icon>
-        </div>
-        <v-navigation-drawer
-          name="mobile-menu"
-          v-model="drawer"
-          order="-1"
-          location="top"
-          permanent
-        >
-          <v-list>
+        </v-row>
+
+        <v-menu activator="#menu-activator" transition="scale-transition">
+          <v-list width="300">
             <v-list-item
               v-for="link in links"
               variant="text"
               :to="localePath(link.item)"
-              @click.stop="drawer = !drawer"
+              :close-on-content-click="true"
             >
               <v-list-item-title>{{ $t(link.item) }}</v-list-item-title>
             </v-list-item>
           </v-list>
-        </v-navigation-drawer>
+        </v-menu>
       </v-toolbar>
     </v-container>
   </v-app-bar>

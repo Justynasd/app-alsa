@@ -1,43 +1,89 @@
 <template>
-  <v-card>
-    <v-card-title class="text-center justify-center py-6">
-      <h1 class="font-weight-bold text-h4 text-basil">{{ $("glassUnits") }}</h1>
+  <v-card color="secondary" class="mx-auto text-body-1 rounded-xl">
+    <v-card-title class="text-center text-h4 text-md-h3 text-lg-h2 ma-8">
+      {{ $t("glassUnitsTitle") }}
     </v-card-title>
+    <v-row class="mb-1 mx-1 ma-md-3 ma-lg-5 ma-xl-15 align-center">
+      <v-col cols="12" md="8">
+        <v-card class="pa-5 rounded-shaped">
+          {{ $t("glassUnitsDesc1") }}
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="4">
+        <v-card class="pa-5 rounded-shaped">
+          {{ $t("glassUnitsDesc2") }}
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row class="mb-1 mx-1 ma-md-3 ma-lg-5 ma-xl-15 align-center">
+      <v-col cols="12" md="7">
+        <v-card class="pa-5 rounded-shaped">
+          {{ $t("glassUnitsDesc3") }}
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="5">
+        <v-card class="pa-5 rounded-shaped">
+          {{ $t("glassUnitsDesc4") }}
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row class="mb-1 mx-1 ma-md-3 ma-lg-5 ma-xl-15 align-center">
+      <v-col cols="12" md="12">
+        <v-card class="pa-5 rounded-shaped">
+          {{ $t("glassUnitsDesc5") }}
+        </v-card>
+      </v-col>
+    </v-row>
 
-    <v-tabs stacked center-active show-arrows bg-color="transparent">
-      <v-tab v-for="item in items" :key="item" :value="item">
-        <v-icon>{{ item.icon }}</v-icon>
-        {{ item.item }}
+    <v-tabs
+      v-model="glassModel"
+      stacked
+      center-active
+      show-arrows
+      bg-color="transparent"
+    >
+      <v-tab v-for="item in items">
+        <v-icon size="large" class="mb-3">{{ item.icon }}</v-icon>
+        {{ $t(item.item) }}
       </v-tab>
     </v-tabs>
 
-    <v-window>
-      <v-window-item v-for="item in items" :key="item" :value="item">
+    <v-window v-model="glassModel">
+      <v-window-item v-for="item in items">
         <v-card flat>
-          <v-card-text>{{ text }}</v-card-text>
+          <v-card-text>{{ item.item }} </v-card-text>
         </v-card>
       </v-window-item>
     </v-window>
   </v-card>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      tab: "Appetizers",
-      items: [
-        { item: "standart", icon: "mdi-window-closed-variant" },
-        { item: "heat", icon: "mdi-heat-wave" },
-        { item: "sun", icon: "mdi-white-balance-sunny" },
-        { item: "hammer", icon: "mdi-hammer" },
-        { item: "mute", icon: "mdi-volume-mute" },
-        { item: "decor", icon: "mdi-hops" },
-      ],
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    };
-  },
-};
+<script lang="ts" setup>
+const glassModel = ref(null);
+const items = ref([
+  { item: "tabStandard", icon: "mdi-window-closed-variant" },
+  { item: "tabHeat", icon: "mdi-heat-wave" },
+  { item: "tabSun", icon: "mdi-white-balance-sunny" },
+  { item: "tabSafe", icon: "mdi-shield-home" },
+  { item: "tabMute", icon: "mdi-volume-mute" },
+  { item: "tabDecorative", icon: "mdi-diamond-stone" },
+]);
+const text =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+const listItems = ref({
+  currentModel: "subtabs",
+  items: [
+    { item: "tabStandard", icon: "mdi-window-closed-variant" },
+    { item: "tabHeat", icon: "mdi-heat-wave" },
+    { item: "tabSun", icon: "mdi-white-balance-sunny" },
+    { item: "tabSafe", icon: "mdi-shield-home" },
+    { item: "tabMute", icon: "mdi-volume-mute" },
+    { item: "tabDecorative", icon: "mdi-diamond-stone" },
+  ],
+});
+
+const selected = ref("tabStandard");
 </script>
 
 <!-- <script lang="ts" setup>
