@@ -1,0 +1,162 @@
+[
+  {
+    "columnName": "Stiklo paketo struktūra",
+    "columnUnitThickness": "Paketo storis",
+    "columnHeatTransfer": "Šilumos perdavimo koeficientas",
+    "columnLightTransmission": "Šviesos laidumas",
+    "columnLightReflection": "Išorinis šviesos atspindėjimas",
+    "columnSolarFactor": "Garso izoliacija"
+  },
+  {
+    "columnName": "Pavadinimas",
+    "columnUnitThickness": "mm",
+    "columnHeatTransfer": "Ug, W/m2K",
+    "columnLightTransmission": "LT, %",
+    "columnLightReflection": "LR, %",
+    "columnSolarFactor": "Rw(C;Ctr), dB"
+  },
+  {
+    "columnName": "Monolitinis stiklas",
+    "columnUnitThickness": "",
+    "columnHeatTransfer": "",
+    "columnLightTransmission": "",
+    "columnLightReflection": "",
+    "columnSolarFactor": ""
+  },
+  {
+    "columnName": "6mm",
+    "columnUnitThickness": "6",
+    "columnHeatTransfer": "5,7",
+    "columnLightTransmission": "90",
+    "columnLightReflection": "8",
+    "columnSolarFactor": "32(-2;-2)"
+  },
+  {
+    "columnName": "8mm",
+    "columnUnitThickness": "8",
+    "columnHeatTransfer": "5,7",
+    "columnLightTransmission": "89",
+    "columnLightReflection": "8",
+    "columnSolarFactor": "34(-1;-3)"
+  },
+  {
+    "columnName": "10mm",
+    "columnUnitThickness": "10",
+    "columnHeatTransfer": "5,7",
+    "columnLightTransmission": "89",
+    "columnLightReflection": "8",
+    "columnSolarFactor": "36(-2;-3)"
+  },
+  {
+    "columnName": "44.1 STADIP SILENCE",
+    "columnUnitThickness": "8,38",
+    "columnHeatTransfer": "5,7",
+    "columnLightTransmission": "89",
+    "columnLightReflection": "8",
+    "columnSolarFactor": "37(-1;-3)"
+  },
+  {
+    "columnName": "55.1 STADIP SILENCE",
+    "columnUnitThickness": "10,38",
+    "columnHeatTransfer": "5,5",
+    "columnLightTransmission": "89",
+    "columnLightReflection": "8",
+    "columnSolarFactor": "38( 0;-2)"
+  },
+  {
+    "columnName": "66.1 STADIP SILENCE",
+    "columnUnitThickness": "12,38",
+    "columnHeatTransfer": "5,4",
+    "columnLightTransmission": "88",
+    "columnLightReflection": "8",
+    "columnSolarFactor": "39( 0;-2)"
+  },
+  {
+    "columnName": "Vienos kameros stiklo paketas",
+    "columnUnitThickness": "",
+    "columnHeatTransfer": "",
+    "columnLightTransmission": "",
+    "columnLightReflection": "",
+    "columnSolarFactor": ""
+  },
+  {
+    "columnName": "6 - 16Ar - 4 Low E 1.1",
+    "columnUnitThickness": "26",
+    "columnHeatTransfer": "1,12",
+    "columnLightTransmission": "81",
+    "columnLightReflection": "11",
+    "columnSolarFactor": "36(-2;-5)"
+  },
+  {
+    "columnName": "8 - 16Ar - 4 Low E 1.1",
+    "columnUnitThickness": "28",
+    "columnHeatTransfer": "1,12",
+    "columnLightTransmission": "81",
+    "columnLightReflection": "11",
+    "columnSolarFactor": "37(-2;-5)"
+  },
+  {
+    "columnName": "10 - 16Ar - 4 Low E 1.1",
+    "columnUnitThickness": "30",
+    "columnHeatTransfer": "1,12",
+    "columnLightTransmission": "80",
+    "columnLightReflection": "11",
+    "columnSolarFactor": "38(-2;-6)"
+  },
+  {
+    "columnName": "44.2 STADIP - 16Ar - 4 Low E 1.1",
+    "columnUnitThickness": "28",
+    "columnHeatTransfer": "1,11",
+    "columnLightTransmission": "80",
+    "columnLightReflection": "11",
+    "columnSolarFactor": "38(-3;-7)"
+  },
+  {
+    "columnName": "44.1 STADIP SILENCE- 12Ar - 4 Low E 1.1",
+    "columnUnitThickness": "24",
+    "columnHeatTransfer": "1,27",
+    "columnLightTransmission": "81",
+    "columnLightReflection": "11",
+    "columnSolarFactor": "37(-1;-4)"
+  },
+  {
+    "columnName": "44.1 STADIP SILENCE- 16Ar - 6 Low E 1.1",
+    "columnUnitThickness": "30",
+    "columnHeatTransfer": "1,11",
+    "columnLightTransmission": "80",
+    "columnLightReflection": "11",
+    "columnSolarFactor": "42(-2;-6)"
+  },
+  {
+    "columnName": "Dviejų kamerų stiklo paketas",
+    "columnUnitThickness": "",
+    "columnHeatTransfer": "",
+    "columnLightTransmission": "",
+    "columnLightReflection": "",
+    "columnSolarFactor": ""
+  },
+  {
+    "columnName": "4 Low E 1.1 - 16Ar - 4 - 16Ar - 4 Low E 1.1",
+    "columnUnitThickness": "44",
+    "columnHeatTransfer": "0,58",
+    "columnLightTransmission": "74",
+    "columnLightReflection": "14",
+    "columnSolarFactor": "34(-2;-6)"
+  },
+  {
+    "columnName": "6 Low E 1.1 - 12Ar - 4 - 12Ar - 4 Low E 1.1",
+    "columnUnitThickness": "38",
+    "columnHeatTransfer": "0,72",
+    "columnLightTransmission": "73",
+    "columnLightReflection": "14",
+    "columnSolarFactor": "36(-2;-5)"
+  },
+  {
+    "columnName": "6 Low E 1.1 - 12Ar - 4 - 12Ar - 44.1 STADIP SILENCE Low E 1.1",
+    "columnUnitThickness": "42",
+    "columnHeatTransfer": "1,72",
+    "columnLightTransmission": "72",
+    "columnLightReflection": "14",
+    "columnSolarFactor": "42(-1;-5)"
+  }
+]
