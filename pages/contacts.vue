@@ -83,7 +83,7 @@
 
             <v-list-item
               prepend-icon="mdi-email"
-              title="stiklas@alsa.lt"
+              title="buhalterija@alsa.lt"
               href="mailto:buhalterija@alsa.lt"
             ></v-list-item>
 

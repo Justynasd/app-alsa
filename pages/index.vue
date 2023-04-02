@@ -18,8 +18,7 @@ const messages = ref([
   <v-row class="justify-center align-center">
     <v-col cols="12" lg="10" xl="8">
       <v-card color="secondary">
-        <v-img height="200" src="/home.jpg" cover class="text-white"> </v-img>
-
+        <v-img :min-width="400" aspect-ratio="4/3" src="/home.jpg" />
         <v-card-text>
           <v-timeline density="compact" class="ml-5">
             <v-timeline-item

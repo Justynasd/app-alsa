@@ -61,7 +61,7 @@
     </v-row>
     <v-row class="ma-4 ma-md-7 ma-lg-12 ma-xl-15 justify-center align-center">
       <v-card class="mb-4 pa-5 rounded-shaped">
-        {{ $t("aboutDesc4") }}
+        {{ $t("aboutDesc5") }}
       </v-card>
     </v-row>
     <!-- </v-sheet> -->
