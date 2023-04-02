@@ -1,5 +1,5 @@
 [
-  { "columnName": "Vienos kameros stiklo paketas" },
+  { "group": true, "columnName": "Vienos kameros stiklo paketas" },
   {
     "columnName": "4 - 16Ar - 4 Low E 1.0",
     "columnUnitThickness": "24",
@@ -32,7 +32,7 @@
     "columnLightReflection": "65",
     "columnSolarFactor": "12/13"
   },
-  { "columnName": "Dviejų kamerų stiklo paketas" },
+  { "group": true, "columnName": "Dviejų kamerų stiklo paketas" },
   {
     "columnName": "4 Low e 1.1 - 12Kr - 4 - 12Kr - 4 Low e 1.1*",
     "columnUnitThickness": "36",
@@ -137,7 +137,7 @@
     "columnLightReflection": "0,71",
     "columnSolarFactor": "12/12"
   },
-  { "columnName": "Trijų kamerų stiklo paketas" },
+  { "group": true, "columnName": "Trijų kamerų stiklo paketas" },
   {
     "columnName": "4 Low e 1.1 - 14Kr - 4 - 14Kr - 4 Low e II - 14Kr - 4 Low e 1.1*",
     "columnUnitThickness": "58",

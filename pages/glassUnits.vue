@@ -36,7 +36,7 @@
     </v-row>
 
     <v-tabs
-      class="my-5"
+      class="my-6 my-md-8 my-lg-10 my-xl-12"
       v-model="glassModel"
       stacked
       center-active
@@ -50,10 +50,16 @@
       </v-tab>
     </v-tabs>
 
-    <v-window class="ma-4" v-model="glassModel" disabled>
+    <v-window
+      class="ma-4 ma-md-6 ma-lg-5 ma-xl-15 align-center text-body-1"
+      v-model="glassModel"
+      disabled
+    >
       <v-window-item v-for="item in items">
-        <v-card class="overflow-x-auto rounded-xl">
-          <TheGrid :data="gridData" :columns="gridColumns"> </TheGrid>
+        <v-card class="pa-4 pa-md-5 pa-lg-6 pa-xl-7 rounded-shaped">
+          <!-- <TheGrid :data="gridData" :columns="gridColumns"> </TheGrid> -->
+          {{ $t(item.card1) }} <br /><br />
+          {{ $t(item.card2) }}
         </v-card>
       </v-window-item>
     </v-window>
@@ -65,12 +71,42 @@ import gridData from "../data/heat.json";
 
 const glassModel = ref(null);
 const items = ref([
-  { item: "tabStandard", icon: "mdi-window-closed-variant" },
-  { item: "tabHeat", icon: "mdi-heat-wave" },
-  { item: "tabSun", icon: "mdi-white-balance-sunny" },
-  { item: "tabSafe", icon: "mdi-shield-home" },
-  { item: "tabMute", icon: "mdi-volume-mute" },
-  { item: "tabDecorative", icon: "mdi-diamond-stone" },
+  {
+    item: "tabStandard",
+    icon: "mdi-window-closed-variant",
+    card1: "cardStandard1",
+    card2: "cardStandard2",
+  },
+  {
+    item: "tabHeat",
+    icon: "mdi-heat-wave",
+    card1: "cardHeat1",
+    card2: "cardHeat2",
+  },
+  {
+    item: "tabSun",
+    icon: "mdi-white-balance-sunny",
+    card1: "cardSun1",
+    card2: "cardSun2",
+  },
+  {
+    item: "tabSafe",
+    icon: "mdi-shield-home",
+    card1: "cardSafe1",
+    card2: "cardSafe2",
+  },
+  {
+    item: "tabMute",
+    icon: "mdi-volume-mute",
+    card1: "cardMute1",
+    card2: "cardMute2",
+  },
+  {
+    item: "tabDecorative",
+    icon: "mdi-diamond-stone",
+    card1: "cardDecorative1",
+    card2: "cardDecorative2",
+  },
 ]);
 
 const gridColumns = ref([

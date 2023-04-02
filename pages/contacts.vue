@@ -2,7 +2,7 @@
   <v-card color="secondary" class="mx-auto text-center rounded-xl">
     <!-- <v-sheet -->
     <v-card-title class="text-center text-h4 text-md-h3 text-lg-h2 ma-8">{{
-      $t("contactsHeader")
+      $t("contactsTitle")
     }}</v-card-title>
     <v-card-text class="text-center text-h5">{{
       $t("companyName")
@@ -23,8 +23,8 @@
             <v-divider inset></v-divider>
             <v-list-item
               prepend-icon="mdi-phone"
-              title="+370 650 91777"
-              href="tel:+370 650 91777"
+              title="+370 650 92099"
+              href="tel:+370 650 92099"
             ></v-list-item>
 
             <v-divider inset></v-divider>

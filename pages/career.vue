@@ -6,7 +6,7 @@
   <v-card class="mx-auto" color="secondary rounded-xl">
     <v-row class="mx-10 justify-center align-center">
       <v-card-title class="text-center text-h4 text-md-h3 text-lg-h2 ma-8">{{
-        $t("careerHeader")
+        $t("careerTitle")
       }}</v-card-title>
 
       <v-col cols="5" md="4">

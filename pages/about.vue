@@ -22,9 +22,15 @@
         <img width="200" src="/rocketdab.png" />
       </v-col>
       <v-col cols="12" md="4">
-        <v-card-text class="text-h5 my-2">{{
-          $t("aboutSubtitle")
-        }}</v-card-text>
+        <v-card-text class="text-h5">
+          {{ $t("aboutSubtitle1") }}
+        </v-card-text>
+        <v-card-text class="text-h5">
+          {{ $t("aboutSubtitle2") }}
+        </v-card-text>
+        <v-card-text class="text-h5">
+          {{ $t("aboutSubtitle3") }}
+        </v-card-text>
       </v-col>
     </v-row>
 
