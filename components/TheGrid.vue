@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-  data: Array,
+  data: Array, // if first element goup = true will use next element as full row
   columns: Array,
 });
 </script>
@@ -16,7 +16,10 @@ const props = defineProps({
     </thead>
     <tbody>
       <tr v-for="item in data">
-        <td clas="overflow-x-visible" v-for="key in columns">
+        <td v-if="item.group" colspan="5">
+          {{ item["columnName"] }}
+        </td>
+        <td v-else v-for="key in columns">
           {{ item[key] }}
         </td>
       </tr>

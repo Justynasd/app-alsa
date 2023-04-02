@@ -2,13 +2,13 @@
 const localePath = useLocalePath();
 const messages = ref([
   {
-    from: "Turim",
-    message: "pažangiausias technologijas, didelę patirtį",
+    from: "homeBullet1",
+    message: "homeText1",
     color: "teal-accent-4",
   },
   {
-    from: "Siulom",
-    message: "tik aukščiausios kokybės produktus",
+    from: "homeBullet2",
+    message: "homeText2",
     color: "teal-accent-4",
   },
 ]);
@@ -29,8 +29,8 @@ const messages = ref([
             >
               <div class="mb-1">
                 <div class="font-weight-normal">
-                  <v-card-title>{{ message.from }}</v-card-title>
-                  {{ message.message }}
+                  <v-card-title>{{ $t(message.from) }}</v-card-title>
+                  {{ $t(message.message) }}
                 </div>
               </div>
             </v-timeline-item>
