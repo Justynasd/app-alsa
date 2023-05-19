@@ -1,6 +1,6 @@
 <template>
   <v-card color="secondary" class="mx-auto text-body-1 rounded-xl">
-    <v-card-title class="text-center text-h4 text-md-h3 text-lg-h2 ma-8">
+    <v-card-title class="text-center text-h4 text-md-h3 text-lg-h2 mt-8 mb-12">
       {{ $t("glassUnitsTitle") }}
     </v-card-title>
     <v-row class="mx-1 mx-md-3 mx-lg-5 mx-xl-15 align-center">
@@ -57,9 +57,10 @@
     >
       <v-window-item v-for="item in items">
         <v-card class="pa-4 pa-md-5 pa-lg-6 pa-xl-7 rounded-shaped">
-          <!-- <TheGrid :data="gridData" :columns="gridColumns"> </TheGrid> -->
           {{ $t(item.card1) }} <br /><br />
-          {{ $t(item.card2) }}
+          {{ $t(item.card2) }} <br /><br />
+          <div v-show="item.card3 != ''">{{ $t(item.card3) }} <br /><br /></div>
+          <div v-show="item.card4 != ''">{{ $t(item.card4) }}</div>
         </v-card>
       </v-window-item>
     </v-window>
@@ -67,8 +68,6 @@
 </template>
 
 <script lang="ts" setup>
-import gridData from "../data/heat.json";
-
 const glassModel = ref(null);
 const items = ref([
   {
@@ -76,123 +75,48 @@ const items = ref([
     icon: "mdi-window-closed-variant",
     card1: "cardStandard1",
     card2: "cardStandard2",
+    card3: "cardStandard3",
+    card4: "cardStandard4",
   },
   {
     item: "tabHeat",
     icon: "mdi-heat-wave",
     card1: "cardHeat1",
     card2: "cardHeat2",
+    card3: "",
+    card4: "",
   },
   {
     item: "tabSun",
     icon: "mdi-white-balance-sunny",
     card1: "cardSun1",
     card2: "cardSun2",
+    card3: "cardSun3",
+    card4: "cardSun4",
   },
   {
     item: "tabSafe",
     icon: "mdi-shield-home",
     card1: "cardSafe1",
     card2: "cardSafe2",
+    card3: "cardSafe3",
+    card4: "",
   },
   {
     item: "tabMute",
     icon: "mdi-volume-mute",
     card1: "cardMute1",
     card2: "cardMute2",
+    card3: "cardMute3",
+    card4: "",
   },
   {
     item: "tabDecorative",
     icon: "mdi-diamond-stone",
     card1: "cardDecorative1",
     card2: "cardDecorative2",
+    card3: "cardDecorative3",
+    card4: "",
   },
 ]);
-
-const gridColumns = ref([
-  "columnName",
-  "columnUnitThickness",
-  "columnHeatTransfer",
-  "columnLightTransmission",
-  "columnLightReflection",
-  "columnSolarFactor",
-]);
-
-// "columnSafeName": "Stiklas",
-//   "columnSafeEN356": "Saugumo klasė pagal EN356",
-//   "columnSafeEN12600": "Saugumo klasė pagal EN12600",
-//   "columnThickness": "Storis, mm",
-//   "columnWeight": "Svoris, kg",
-//   "columnName": "Stiklo paketo struktūra, Pavadinimas",
-//   "columnUnitThickness": "Paketo storis, mm",
-//   "columnHeatTransfer": "Šilumos perdavimo koeficientas, Ug, W/m2K",
-//   "columnLightTransmission": "Šviesos laidumas, LT, %",
-//   "columnLightReflection": "Šviesos atspindėjimas, LR, %",
-//   "columnSolarFactor": "Saulės faktorius, g, %",
-//   "columnMute": "Garso izoliacija, Rw(C;Ctr) dB",
-
-// const gridData = [
-//   { columnName: "Vienos kameros stiklo paketas" },
-//   {
-//     columnName: "4 - 16Ar - 4 Low e",
-//     thickness: "24",
-//     heatTransfer: "1,12",
-//     lightTransmission: "82",
-//     lightReflection: "12/13",
-//     solarFactor: "65",
-//   },
-//   {
-//     columnName: "4 - 10Kr - 4 Low e*",
-//     thickness: "18",
-//     heatTransfer: "1,04",
-//     lightTransmission: "82",
-//     lightReflection: "12/13",
-//     solarFactor: "65",
-//   },
-//   {
-//     columnName:
-//       "Dviejų kamerų stiklo paketas 4 Low e 1.1 - 12Kr - 4 - 12Kr - 4 Low e 1.1*",
-//     thickness: "36",
-//     heatTransfer: "0,49",
-//     lightTransmission: "74",
-//     lightReflection: "14/14",
-//     solarFactor: "53",
-//   },
-//   {
-//     columnName:
-//       "Dviejų kamerų stiklo paketas 4 Low e 1.1 - 16Ar - 4 - 16Ar - 4 Low e 1.1",
-//     thickness: "44",
-//     heatTransfer: "0,58",
-//     lightTransmission: "75",
-//     lightReflection: "16/16",
-//     solarFactor: "54",
-//   },
-//   {
-//     columnName:
-//       "Dviejų kamerų stiklo paketas 4 Low e 1.1 - 20Ar - 4 - 20Ar - 4 Low e 1.1",
-//     thickness: "52",
-//     heatTransfer: "0,52",
-//     lightTransmission: "75",
-//     lightReflection: "16/16",
-//     solarFactor: "54",
-//   },
-//   {
-//     columnName:
-//       "Trijų kamerų stiklo paketas 4 Low e 1.1 - 14Kr - 4 - 14Kr - 4 Low e II - 14Kr - 4 Low e 1.1*",
-//     thickness: "58",
-//     heatTransfer: "0,30",
-//     lightTransmission: "68",
-//     lightReflection: "19/19",
-//     solarFactor: "48",
-//   },
-//   {
-//     columnName:
-//       "Trijų kamerų stiklo paketas 4 Low e 1.1 - 18Ar - 4 - 14Ar - 4 Low e II - 18Ar - 4 Low e 1.1",
-//     thickness: "68",
-//     heatTransfer: "0,39",
-//     lightTransmission: "68",
-//     lightReflection: "19/19",
-//     solarFactor: "48",
-//   },
-// ];
 </script>
