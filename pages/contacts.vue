@@ -1,9 +1,10 @@
 <template>
   <v-card color="secondary" class="mx-auto text-center rounded-xl">
     <!-- <v-sheet -->
-    <v-card-title class="text-center text-h4 text-md-h3 text-lg-h2 ma-8">{{
-      $t("contactsTitle")
-    }}</v-card-title>
+    <v-card-title
+      class="text-center text-h4 text-md-h3 text-lg-h2 mt-8 mb-10"
+      >{{ $t("contactsTitle") }}</v-card-title
+    >
     <v-card-text class="text-center text-h5">{{
       $t("companyName")
     }}</v-card-text>
