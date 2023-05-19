@@ -8,18 +8,15 @@ const config = useRuntimeConfig();
 const mapDiv = ref<HTMLElement | null>(null);
 const loader = new Loader({
   apiKey: config.apiKey,
-  // apiKey: config.public.apiKey,
-  // version: "weekly",
-  //   ...additionalOptions,
 });
 onMounted(async () => {
   await loader.load();
-  const center /*: google.maps.LatLngLiteral*/ = {
+  const center = {
     lat: 54.705894337486754,
     lng: 25.27500567845598,
   };
   const map = new google.maps.Map(mapDiv.value as HTMLElement, {
-    center: center, //{ lat: 54.705894337486754, lng: 25.27500567845598 },
+    center: center,
     zoom: 15,
   });
 
