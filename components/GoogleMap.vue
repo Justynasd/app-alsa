@@ -7,7 +7,7 @@ import { Loader } from "@googlemaps/js-api-loader";
 const config = useRuntimeConfig();
 const mapDiv = ref<HTMLElement | null>(null);
 const loader = new Loader({
-  apiKey: config.apiKey,
+  apiKey: config.public.apiKey,
 });
 onMounted(async () => {
   await loader.load();

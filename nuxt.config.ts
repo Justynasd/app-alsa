@@ -1,13 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  privateRuntimeConfig: {
-    apiKey: process.env.API_KEY,
+  runtimeConfig: {
+    public: {
+      apiKey: "AIzaSyB33KxZK5XS66anT1AmdH2EDTz1YDnJDKE",
+    },
   },
-  // runtimeConfig: {
-  //   public: {
-  //     apiKey: "AIzaSyB33KxZK5XS66anT1AmdH2EDTz1YDnJDKE",
-  //   },
-  // },
   css: [
     "vuetify/lib/styles/main.sass",
     "@mdi/font/css/materialdesignicons.min.css",
