@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  alias: {
-    "~": "/<rootDir>",
-    "@": "/<rootDir>",
-    assets: "/<rootDir>/assets",
+  runtimeConfig: {
+    public: {
+      apiKey: "AIzaSyB33KxZK5XS66anT1AmdH2EDTz1YDnJDKE",
+    },
   },
   css: [
     "vuetify/lib/styles/main.sass",

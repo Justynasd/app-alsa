@@ -18,7 +18,12 @@ const messages = ref([
   <v-row class="justify-center align-center">
     <v-col cols="12" lg="10" xl="8">
       <v-card color="secondary">
-        <v-img :min-width="400" aspect-ratio="4/3" src="/home.jpg" />
+        <img
+          width="800"
+          height="400"
+          src="~/assets/index-small.jpg"
+          alt="Alsa"
+        />
         <v-card-text>
           <v-timeline density="compact" class="ml-5">
             <v-timeline-item
@@ -49,3 +54,10 @@ const messages = ref([
     </v-col>
   </v-row>
 </template>
+
+<style>
+img {
+  width: 100%;
+  height: auto;
+}
+</style>
