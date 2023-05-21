@@ -24,8 +24,8 @@ const messages = ref([
           src="~/assets/index-small.jpg"
           alt="Alsa"
         />
+        <h1>LABAS</h1>
         <v-card-text>
-          <h1>LABAS</h1>
           <v-timeline density="compact" class="ml-5">
             <v-timeline-item
               v-for="message in messages"
