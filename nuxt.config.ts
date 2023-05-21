@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      apiKey: "AIzaSyB33KxZK5XS66anT1AmdH2EDTz1YDnJDKE",
+      apiKey: process.env.API_KEY,
     },
   },
   css: [
